@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@800&display=swap');
+
 :root {
-    --font: ;
+    --font: Helvetica, sans-serif;
+    --bgColor: #f1f5f8;
+    --details: #52A3D9;
+    --detailsLight: #52a3d972;
+    --quotes: 'Nunito Sans', sans-serif;
 }
 
 html {
@@ -18,6 +24,145 @@ body {
     margin: 0;
     padding: 0;
     min-width: 36rem;
+    font-family: var(--font);
+    background-color: var(--bgColor);
+    
+}
 
-    background-color: cornflowerblue;
+.container {
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.title {
+    margin-bottom: 5rem;
+    padding: 0;
+    line-height: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.underline {
+    width: 7rem;
+    border-bottom: solid var(--details) .4rem;
+}
+
+.review-container {
+    max-width: 60rem;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: .5rem .5rem 1rem .001rem rgba(0, 0, 0, .05);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pic-section {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 10rem;
+    background-image: url("https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.pic-section::after {
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 10rem;
+    left: .8rem;
+    bottom: .4rem;
+    z-index: -1;
+    content: "";
+    background-color: var(--details);
+}
+
+.pic-section::before {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    top: .5rem;
+    border-radius: 5rem;
+    content: ",,";
+    line-height: 45%;
+    text-align: center;
+    font-size: 4rem;
+    font-family: var(--quotes);
+    background-color: var(--details);
+    color: white;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 1.8rem;
+    letter-spacing: .4rem;
+    margin-bottom: .2rem;
+}
+
+.rol {
+    color: var(--details);
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 1.4rem;
+    letter-spacing: .01rem;
+    line-height: 1.5rem;
+}
+
+.review {
+    text-align: center;
+    line-height: 2.5rem;
+    color: rgb(42, 42, 42);
+    font-size: 1.5rem;
+    padding: 0 3rem;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    color: var(--details);
+
+   
+}
+
+.arrows {
+    display: flex;
+    font-weight: bold;
+    gap: 1.5rem;
+    margin: 0 auto;
+    
+}
+
+.previous, 
+.next {
+    background-color: inherit;
+    padding: .5rem 1rem;
+}
+
+.randBtn {
+    border: solid var(--details) .2rem;
+    border-radius: .8rem;
+    padding: .2rem 1rem;
+    background-color: var(--detailsLight);
+    font-size: 1.3rem;
+}
+
+.randBtn:hover,
+.next:hover,
+.previous:hover {
+    filter: brightness(75%);
+    cursor: pointer;
 }
