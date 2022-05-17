@@ -12,11 +12,11 @@ let jsonData;
 getData();
 
 prev.addEventListener('click', () => {
-    id = (id <= 0) ? id : id - 1;
+    id = (id <= 0) ? 3 : id - 1;
     updateReview(id);
 });
 next.addEventListener('click', () => {
-    id = (id >= 3) ? id : id + 1;
+    id = (id >= 3) ? 0 : id + 1;
     updateReview(id);
 });
 randBtn.addEventListener('click', () => {
