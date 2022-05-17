@@ -110,6 +110,7 @@ body {
     font-size: 1.8rem;
     letter-spacing: .4rem;
     margin-bottom: .2rem;
+    text-transform: capitalize;
 }
 
 .rol {
